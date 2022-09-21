@@ -31,7 +31,7 @@ Packer is a free tool which use your cloud compute engine to create custom machi
 Make sure you meet these terms:
 
 - A billing enabled google project
-- A Git repo contains your source code
+- A Git repository contains your source code
 - To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
 ## Steps
@@ -89,9 +89,9 @@ gcloud builds submit .
 
 Wait a few second and press `y` when prompt
 
-### Add packer configs to your source code
+### Add packer configurations to your source code
 
-At the root of your repo, add these files:
+At the root of your repository, add these files:
 
 #### **`cloudbuild.yaml`**
 

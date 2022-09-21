@@ -1,0 +1,8 @@
+GCP
+CentOS
+HashiCorp
+gcloud
+APIs
+JSON
+IAM
+VM
