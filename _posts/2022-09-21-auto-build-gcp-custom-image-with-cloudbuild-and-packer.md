@@ -40,15 +40,15 @@ Make sure you meet these terms:
 
 1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
 
-2. Obtains Project ID
+1. Obtains Project ID
 
-<img src="./project-id.png" height="100" src="Project Id"/>
+![Project Id](./project-id.png)
 
-2. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
+1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
 
-3. Click button `ENABLE APIS AND SERVICES`.
+1. Click button `ENABLE APIS AND SERVICES`.
 
-4. Search for these APIs and enable all of them:
+1. Search for these APIs and enable all of them:
 
 - Cloud Build API
 - Compute Engine API
@@ -59,9 +59,9 @@ Make sure you meet these terms:
 
 1. From the `Navigation Menu` -> `IAM & Admin` -> `IAM`.
 
-2. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
+1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
 
-3. Add these roles:
+1. Add these roles:
 
 - Cloud Build Service Account (already added by default)
 - Compute Admin
@@ -75,13 +75,13 @@ Make sure you meet these terms:
 git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
 ```
 
-2. Cd into packer
+1. Cd into packer
 
 ```bash
 cd cloud-builders-community/packer
 ```
 
-3. Build and publish to `gcr.io`
+1. Build and publish to `gcr.io`
 
 ```bash
 gcloud builds submit .
@@ -130,9 +130,9 @@ steps:
 
 1. From the `Navigation Menu` -> `Cloud Build` -> `Triggers`.
 
-2. Click button `+ Create Trigger`.
+1. Click button `+ Create Trigger`.
 
-3. Input these values:
+1. Input these values:
 
 - Name: `<your-trigger-name>`
 - Event: `Push to a branch`
@@ -142,13 +142,13 @@ steps:
 - Cloud Build configuration file location: `cloudbuild.yaml`
 - Service account: Leave empty
 
-4. Click button `Create`
+1. Click button `Create`
 
 ### Run Trigger
 
 1. Click button `RUN` from triggers list.
 
-2. From the `Navigation Menu` -> `Cloud Build` -> `History`.
+1. From the `Navigation Menu` -> `Cloud Build` -> `History`.
 
 ## Results
 
