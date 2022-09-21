@@ -40,7 +40,7 @@ It also has supports for Amazon Web Service, Azure and many more.
 
 ### Enable required APIs
 
-1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
+1. Browse to [Google Cloud Console](https://console.cloud.google.com/)
 2. Obtains Project ID
    ![Project Id](./project-id.png)
 3. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
