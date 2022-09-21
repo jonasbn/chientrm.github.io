@@ -162,8 +162,7 @@ An image named `packer-<timestamp>` is created.
 Failed to trigger build: generic::invalid_argument: generic::invalid_argument: if 'build.service_account' is specified, the build must either (a) specify 'build.logs_bucket' (b) use the CLOUD_LOGGING_ONLY logging option, or (c) use the NONE logging option
 ```
 
-Leave empty the service account when creating Cloud Build Trigger.
-
+Leave the service account empty when creating Cloud Build Trigger.
 
 ## References
 
