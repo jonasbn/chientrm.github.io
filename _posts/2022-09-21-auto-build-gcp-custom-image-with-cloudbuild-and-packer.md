@@ -51,10 +51,10 @@ Make sure you meet these terms:
 
   1. Search for these APIs and enable all of them:
 
-    - Cloud Build API
-    - Compute Engine API
-    - Service Management API
-    - Google Cloud Storage JSON API
+      - Cloud Build API
+      - Compute Engine API
+      - Service Management API
+      - Google Cloud Storage JSON API
 
 ### Grant IAM permissions for Cloud Build principal
 
@@ -64,11 +64,11 @@ Make sure you meet these terms:
 
   1. Add these roles:
 
-    - Cloud Build Service Account (already added by default)
-    - Compute Admin
-    - Service Account User
+      - Cloud Build Service Account (already added by default)
+      - Compute Admin
+      - Service Account User
 
-  ### Publish `packer` container image to your `gcr.io`
+### Publish `packer` container image to your `gcr.io`
 
   1. Clone packer project
 
