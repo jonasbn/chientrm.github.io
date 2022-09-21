@@ -6,14 +6,14 @@ title:  "Auto build GCP custom image with Cloud Build and Packer"
 
 ## Google Cloud Platform
 
-GCP is one of the largest cloud platforms in the world.
+GCP is one of the largest cloud platforms in the world, it has wide cloud computing, storage and networking.
 
-GCP has wide cloud computing, storage and networking.
+If you are a new user, Google Cloud give you `$300` credit for 1 year free trial.
 
-GCP has `$300` credit for 1 year free trial. In case you don't have a trial session or enough credit for on GCP, Cloud Build service still offer you free 120 minutes/day on `n1-standard-1` machine type.
+Furthermore, Cloud Build service offer free 120 minutes/day of machine type `n1-standard-1`.
 
 ## Packer by HashiCorp
 
-Packer is an free tool which use your cloud compute engine to create custom machine image.
+Packer is a free tool which use your cloud compute engine to create custom machine image.
 
-Packer has wide supports for Google Cloud Platform, Amazon Web Service, Azure and many more.
+It has wide supports for Google Cloud Platform, Amazon Web Service, Azure and many more.
