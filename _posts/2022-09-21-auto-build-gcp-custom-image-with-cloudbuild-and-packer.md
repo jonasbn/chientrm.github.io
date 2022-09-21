@@ -16,21 +16,19 @@ Thus, this article will help you set up the workflow and avoid those mistakes.
 
 ### Google Cloud Platform
 
-GCP is one of the largest cloud platforms in the world, it has wide cloud computing, storage and networking.
-
-If you are a new user, Google Cloud give you `$300` credit for 1 year free trial.
-
-Furthermore, Cloud Build service offer free `120 minutes/day` of machine type `n1-standard-1`.
+GCP is one of the largest cloud platforms in the world.
+Compute Engine is one of the mainstream services provided.
+By registering trial, you will get free `$300` for 1 year usage.
+Moreover, Cloud Build gives free `120 min/day` (machine type `n1-standard-1`).
 
 ### Packer by HashiCorp
 
-Packer is a free tool which use your cloud compute engine to create custom machine image. It has wide supports for Google Cloud Platform, Amazon Web Service, Azure and many more.
+Packer use your cloud compute engine to help you create machine image.
+It also has supports for Amazon Web Service, Azure and many more.
 
 ## Requirements
 
-Make sure you meet these terms:
-
-- A billing enabled google project
+- A billing linked GCP project
 - A Git repository contains your source code
 - To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
