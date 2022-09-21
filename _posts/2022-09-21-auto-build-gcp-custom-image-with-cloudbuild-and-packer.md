@@ -43,8 +43,6 @@ Make sure you meet these terms:
 
   1. Obtains Project ID
 
-  ![Project Id](./project-id.png)
-
   1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
 
   1. Click button `ENABLE APIS AND SERVICES`.
