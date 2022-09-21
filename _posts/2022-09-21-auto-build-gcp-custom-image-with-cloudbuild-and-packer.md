@@ -165,7 +165,7 @@ original error: ssh: handshake failed: ssh: unable to authenticate,
 attempted methods [none publickey], no supported methods remain
 ```
 
-Solution: Try changing source image. Ex: change from ubuntu to debian.
+Solution: Try changing source image. Ex: change from Ubuntu to Debian.
 
 ## References
 
