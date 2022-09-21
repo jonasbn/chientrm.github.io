@@ -8,7 +8,7 @@ tags: cloud build, custom image, packer, devops, workflows
 
 Google Cloud offers developers thousands of free and public machine images.
 However, developers still need to create custom image for specified cases.
-Although there are already guide from GCP and Packer,
+Although there are already guidelines from GCP and Packer,
 none of them point out mistakes that can cause hours of debugging.
 Thus, this article will help you set up the correct workflow and avoid them.
 
@@ -64,21 +64,21 @@ It also has supports for Amazon Web Service, Azure and many more.
 
 1. Clone packer project
 
-   ```bash
-   git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
-   ```
+    ```bash
+    git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
+    ```
 
 1. Cd into packer
 
-   ```bash
-   cd cloud-builders-community/packer
-   ```
+    ```bash
+    cd cloud-builders-community/packer
+    ```
 
 1. Build and publish to `gcr.io`
 
-   ```bash
-   gcloud builds submit .
-   ```
+    ```bash
+    gcloud builds submit .
+    ```
 
 Wait a few second and press `y` when prompt appears
 
@@ -89,34 +89,34 @@ At the root of your repository, add these files:
 #### **`cloudbuild.yaml`**
 
 ```yaml
-steps:
-  - name: "gcr.io/<your-project-id>/packer"
-    args:
-      - build
-      - packer.json
+    steps:
+      - name: "gcr.io/<your-project-id>/packer"
+        args:
+          - build
+          - packer.json
 ```
 
 #### **`packer.json`**
 
 ```json
-{
-  "builders": [
     {
-      "type": "googlecompute",
-      "project_id": "<your-project-id>",
-      "zone": "us-central1-a",
-      "image_storage_locations": ["us-central1"],
-      "ssh_username": "packer",
-      "source_image_family": "debian-11",
+      "builders": [
+        {
+          "type": "googlecompute",
+          "project_id": "<your-project-id>",
+          "zone": "us-central1-a",
+          "image_storage_locations": ["us-central1"],
+          "ssh_username": "packer",
+          "source_image_family": "debian-11",
+        }
+      ],
+      "provisioners": [
+        {
+          "type": "shell",
+          "inline": "echo 'Hello World!'"
+        }
+      ]
     }
-  ],
-  "provisioners": [
-    {
-      "type": "shell",
-      "inline": "echo 'Hello World!'"
-    }
-  ]
-}
 ```
 
 ### Setup Cloud Build Trigger
@@ -137,6 +137,7 @@ steps:
 
 1. Click button `RUN` from triggers list.
 1. From the `Navigation Menu` -> `Cloud Build` -> `History`.
+1. Wait for build.
 
 ## Results
 
@@ -164,7 +165,7 @@ original error: ssh: handshake failed: ssh: unable to authenticate,
 attempted methods [none publickey], no supported methods remain
 ```
 
-Solution: Try changing source image
+Solution: Try changing source image. Ex: change from ubuntu to debian.
 
 ## References
 
