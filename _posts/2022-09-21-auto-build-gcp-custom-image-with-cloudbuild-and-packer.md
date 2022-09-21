@@ -50,7 +50,6 @@ Make sure you meet these terms:
 1. Click button `ENABLE APIS AND SERVICES`.
 
 1. Search for these APIs and enable all of them:
-
    - Cloud Build API
    - Compute Engine API
    - Service Management API
