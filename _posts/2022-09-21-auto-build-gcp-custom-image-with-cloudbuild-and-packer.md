@@ -23,14 +23,18 @@ Moreover, Cloud Build gives free `120 min/day` (machine type `n1-standard-1`).
 
 ### Packer by HashiCorp
 
-Packer use your cloud compute engine to help you create machine image.
+Packer use your cloud compute engine to help you create a machine image.
 It also has supports for Amazon Web Service, Azure and many more.
 
 ## Requirements
 
 - A billing linked GCP project
 - A Git repository contains your source code
-- To install [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
+- To install [gcloud](
+  https://cloud.google.com/sdk/docs/install
+  ) or launch [Cloud Shell](
+  https://cloud.google.com/shell/docs/launching-cloud-shell
+  )
 
 ## Steps
 
