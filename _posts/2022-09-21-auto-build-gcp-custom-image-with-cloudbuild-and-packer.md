@@ -8,7 +8,7 @@ Google Cloud offer developers thousands of free and public machine images. They 
 
 In many cases, developers want to create their own images, either for daily usage or business requirements.
 
-Thus, in this article, we will guide you on how to using Google Cloud Build to automate creating custom machine images.
+Thus, in this article, we will guide you on how to use Google Cloud Build to automate creating custom machine images.
 
 # Introduction
 
