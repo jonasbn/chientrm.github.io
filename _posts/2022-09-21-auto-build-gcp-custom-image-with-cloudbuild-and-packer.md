@@ -31,9 +31,9 @@ Packer is a free tool which use your cloud compute engine to create custom machi
 
 Make sure you meet these terms:
 
-  - A billing enabled google project
-  - A Git repository contains your source code
-  - To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
+- A billing enabled google project
+- A Git repository contains your source code
+- To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
 ## Steps
 
@@ -163,16 +163,16 @@ An image named `packer-<timestamp>` is created.
 Failed to trigger build: generic::invalid_argument: generic::invalid_argument: if 'build.service_account' is specified, the build must either (a) specify 'build.logs_bucket' (b) use the CLOUD_LOGGING_ONLY logging option, or (c) use the NONE logging option
 ```
 
-  - Leave the service account empty when creating Cloud Build Trigger.
+- Leave the service account empty when creating Cloud Build Trigger.
 
 ```bash
 Error waiting for SSH: Packer experienced an authentication error when trying to connect via SSH. This can happen if your username/password are wrong. You may want to double-check your credentials as part of your debugging process. original error: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
 ```
 
-  - Try changing source image
+- Try changing source image
 
 ## References
 
-  - [Building VM images using Packer](https://cloud.google.com/build/docs/building/build-vm-images-with-packer)
-  - [Google Compute Builder](https://www.packer.io/plugins/builders/googlecompute)
-  - [Community-contributed images for Google Cloud Build](https://github.com/GoogleCloudPlatform/cloud-builders-community)
+- [Building VM images using Packer](https://cloud.google.com/build/docs/building/build-vm-images-with-packer)
+- [Google Compute Builder](https://www.packer.io/plugins/builders/googlecompute)
+- [Community-contributed images for Google Cloud Build](https://github.com/GoogleCloudPlatform/cloud-builders-community)
