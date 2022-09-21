@@ -32,7 +32,7 @@ Make sure you meet these terms:
 
 - A billing enabled google project
 - A Git repo contains your source code
-- To install the [gcloud CLI](https://cloud.google.com/sdk/docs/install) or knew how to [Launch Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
+- To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
 ## Steps
 
@@ -137,7 +137,7 @@ steps:
 - Name: `<your-trigger-name>`
 - Event: `Push to a branch`
 - Source: Connect to your Git repository
-- Configuration: `Cloud Build configuration file (yaml or json)`
+- Configuration: `Autodetected`
 - Location: `Repository`
 - Cloud Build configuration file location: `cloudbuild.yaml`
 - Service account: Leave empty
@@ -146,13 +146,24 @@ steps:
 
 ### Run Trigger
 
-Click button `RUN` from triggers list. When the snackbar appear, click `Show` to trace real-time logs.
+1. Click button `RUN` from triggers list.
+
+2. From the `Navigation Menu` -> `Cloud Build` -> `History`.
 
 ## Results
 
-From the `Navigation Menu` -> `Compute Engine` -> `STORAGE` -> `Images`
+From the `Navigation Menu` -> `Compute Engine` -> `STORAGE` -> `Images`.
 
-An image is created with name `packer-<timestamp>`
+An image named `packer-<timestamp>` is created.
+
+## Troubleshooting FAQ
+
+```bash
+Failed to trigger build: generic::invalid_argument: generic::invalid_argument: if 'build.service_account' is specified, the build must either (a) specify 'build.logs_bucket' (b) use the CLOUD_LOGGING_ONLY logging option, or (c) use the NONE logging option
+```
+
+Leave empty the service account when creating Cloud Build Trigger.
+
 
 ## References
 
