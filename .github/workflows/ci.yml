@@ -2,11 +2,28 @@ name: CI
 
 on:
   pull_request:
-    branches: [ "main" ]
-
+    branches: ["main"]
 jobs:
-  test:
+  gramma:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: pip install proselint
+      - run: npm i gramma -g
+      - run: |
+          for file in _posts/*.md
+          do
+            gramma check -m -p "$file"
+          done
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: rojopolis/spellcheck-github-actions@0.27.0
+        with:
+          task_name: Markdown
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: sudo gem install mdl
+      - run: mdl _posts
