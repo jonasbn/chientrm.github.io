@@ -31,9 +31,9 @@ Packer is a free tool which use your cloud compute engine to create custom machi
 
 Make sure you meet these terms:
 
-- A billing enabled google project
-- A Git repository contains your source code
-- To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
+  - A billing enabled google project
+  - A Git repository contains your source code
+  - To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
 ## Steps
 
@@ -51,10 +51,10 @@ Make sure you meet these terms:
 
 1. Search for these APIs and enable all of them:
 
-   - Cloud Build API
-   - Compute Engine API
-   - Service Management API
-   - Google Cloud Storage JSON API
+    - Cloud Build API
+    - Compute Engine API
+    - Service Management API
+    - Google Cloud Storage JSON API
 
 ### Grant IAM permissions for Cloud Build principal
 
@@ -64,29 +64,29 @@ Make sure you meet these terms:
 
 1. Add these roles:
 
-   - Cloud Build Service Account (already added by default)
-   - Compute Admin
-   - Service Account User
+    - Cloud Build Service Account (already added by default)
+    - Compute Admin
+    - Service Account User
 
 ### Publish `packer` container image to your `gcr.io`
 
 1. Clone packer project
 
-  ```bash
-  git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
-  ```
+    ```bash
+    git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
+    ```
 
 1. Cd into packer
 
-  ```bash
-  cd cloud-builders-community/packer
-  ```
+    ```bash
+    cd cloud-builders-community/packer
+    ```
 
 1. Build and publish to `gcr.io`
 
-  ```bash
-  gcloud builds submit .
-  ```
+    ```bash
+    gcloud builds submit .
+    ```
 
 Wait a few second and press `y` when prompt appears
 
@@ -96,36 +96,36 @@ At the root of your repository, add these files:
 
 #### **`cloudbuild.yaml`**
 
-  ```yaml
-  steps:
-    - name: "gcr.io/<your-project-id>/packer"
-      args:
-        - build
-        - packer.json
-  ```
+```yaml
+steps:
+  - name: "gcr.io/<your-project-id>/packer"
+    args:
+      - build
+      - packer.json
+```
 
 #### **`packer.json`**
 
-  ```json
-  {
-    "builders": [
-      {
-        "type": "googlecompute",
-        "project_id": "<your-project-id>",
-        "zone": "us-central1-a",
-        "image_storage_locations": ["us-central1"],
-        "ssh_username": "packer",
-        "source_image_family": "debian-11",
-      }
-    ],
-    "provisioners": [
-      {
-        "type": "shell",
-        "inline": "echo 'Hello World!'"
-      }
-    ]
-  }
-  ```
+```json
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "project_id": "<your-project-id>",
+      "zone": "us-central1-a",
+      "image_storage_locations": ["us-central1"],
+      "ssh_username": "packer",
+      "source_image_family": "debian-11",
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": "echo 'Hello World!'"
+    }
+  ]
+}
+```
 
 ### Setup Cloud Build Trigger
 
@@ -135,13 +135,13 @@ At the root of your repository, add these files:
 
 1. Input these values:
 
-   - Name: `<your-trigger-name>`
-   - Event: `Push to a branch`
-   - Source: Connect to your Git repository
-   - Configuration: `Autodetected`
-   - Location: `Repository`
-   - Cloud Build configuration file location: `cloudbuild.yaml`
-   - Service account: Leave empty
+    - Name: `<your-trigger-name>`
+    - Event: `Push to a branch`
+    - Source: Connect to your Git repository
+    - Configuration: `Autodetected`
+    - Location: `Repository`
+    - Cloud Build configuration file location: `cloudbuild.yaml`
+    - Service account: Leave empty
 
 1. Click button `Create`
 
