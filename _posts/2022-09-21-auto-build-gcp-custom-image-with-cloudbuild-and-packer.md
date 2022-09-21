@@ -159,6 +159,12 @@ Error waiting for SSH: Packer experienced an authentication error when trying to
 
 ## References
 
-- [Building VM images using Packer](https://cloud.google.com/build/docs/building/build-vm-images-with-packer)
-- [Google Compute Builder](https://www.packer.io/plugins/builders/googlecompute)
-- [Community-contributed images for Google Cloud Build](https://github.com/GoogleCloudPlatform/cloud-builders-community)
+- [Building VM images using Packer](
+  https://cloud.google.com/build/docs/building/build-vm-images-with-packer
+  )
+- [Google Compute Builder](
+  https://www.packer.io/plugins/builders/googlecompute
+  )
+- [Community-contributed images for Google Cloud Build](
+  https://github.com/GoogleCloudPlatform/cloud-builders-community
+  )
