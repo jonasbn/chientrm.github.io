@@ -64,29 +64,29 @@ Make sure you meet these terms:
 
 1. Add these roles:
 
-    - Cloud Build Service Account (already added by default)
-    - Compute Admin
-    - Service Account User
+   - Cloud Build Service Account (already added by default)
+   - Compute Admin
+   - Service Account User
 
 ### Publish `packer` container image to your `gcr.io`
 
 1. Clone packer project
 
-  ```bash
-  git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
-  ```
+   ```bash
+   git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
+   ```
 
 1. Cd into packer
 
-  ```bash
-  cd cloud-builders-community/packer
-  ```
+   ```bash
+   cd cloud-builders-community/packer
+   ```
 
 1. Build and publish to `gcr.io`
 
-  ```bash
-  gcloud builds submit .
-  ```
+   ```bash
+   gcloud builds submit .
+   ```
 
 Wait a few second and press `y` when prompt appears
 
@@ -135,13 +135,13 @@ steps:
 
 1. Input these values:
 
-    - Name: `<your-trigger-name>`
-    - Event: `Push to a branch`
-    - Source: Connect to your Git repository
-    - Configuration: `Autodetected`
-    - Location: `Repository`
-    - Cloud Build configuration file location: `cloudbuild.yaml`
-    - Service account: Leave empty
+   - Name: `<your-trigger-name>`
+   - Event: `Push to a branch`
+   - Source: Connect to your Git repository
+   - Configuration: `Autodetected`
+   - Location: `Repository`
+   - Cloud Build configuration file location: `cloudbuild.yaml`
+   - Service account: Leave empty
 
 1. Click button `Create`
 
