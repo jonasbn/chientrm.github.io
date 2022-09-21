@@ -40,15 +40,10 @@ Make sure you meet these terms:
 ### Enable required APIs
 
 1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
-
 1. Obtains Project ID
-
 ![Project Id](./project-id.png)
-
 1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
-
 1. Click button `ENABLE APIS AND SERVICES`.
-
 1. Search for these APIs and enable all of them:
    - Cloud Build API
    - Compute Engine API
@@ -62,7 +57,6 @@ Make sure you meet these terms:
 1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
 
 1. Add these roles:
-
    - Cloud Build Service Account (already added by default)
    - Compute Admin
    - Service Account User
