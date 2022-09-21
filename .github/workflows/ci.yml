@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm i gramma -g
-      - run: gramma config disable typography -g
       - run: gramma check -m -p _posts/2022-09-21-auto-build-gcp-custom-image-with-cloudbuild-and-packer.md
   spellcheck:
     runs-on: ubuntu-latest
