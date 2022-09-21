@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Auto build GCP custom image with Cloud Build and Packer"
 ---
 
