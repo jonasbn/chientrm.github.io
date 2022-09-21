@@ -1,18 +1,16 @@
 ---
 title:  "Auto build GCP custom image with Cloud Build and Packer"
+categories: google cloud platform
 tags: cloud build, custom image, packer, devops, workflows
 ---
 
 ## Abstract
 
-Google Cloud offer developers thousands of free and public machine images.
-They include famous Linux distributions like CentOS, Ubuntu, Debian, ... being built for both regular usages and specialized usages.
-
-In many cases, developers want to create their own images, either for daily usage or business requirements.
-
-There are many guides on setting up Cloud Build for image building. However, none of them point out common mistakes that can cause hours of logs tracing and retrying till you can get it works.
-
-In this tutorial, we will help you set up the custom image workflow and avoid common mistakes.
+Google Cloud offers developers thousands of free and public machine images.
+However, developers still need to create custom image for specified cases.
+Although there are already guide from GCP and Packer,
+none of them point out mistakes that can cause hours of debugging.
+Thus, this article will help you set up the workflow and avoid those mistakes.
 
 ## Introduction
 
