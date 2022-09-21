@@ -39,20 +39,22 @@ Make sure you meet these terms:
 
 ### Enable required APIs
 
-  1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
+1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
 
-  1. Obtains Project ID
+1. Obtains Project ID
 
-  1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
+![Project Id](./project-id.png)
 
-  1. Click button `ENABLE APIS AND SERVICES`.
+1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
 
-  1. Search for these APIs and enable all of them:
+1. Click button `ENABLE APIS AND SERVICES`.
 
-      - Cloud Build API
-      - Compute Engine API
-      - Service Management API
-      - Google Cloud Storage JSON API
+1. Search for these APIs and enable all of them:
+
+    - Cloud Build API
+    - Compute Engine API
+    - Service Management API
+    - Google Cloud Storage JSON API
 
 ### Grant IAM permissions for Cloud Build principal
 
