@@ -51,10 +51,10 @@ Make sure you meet these terms:
 
 1. Search for these APIs and enable all of them:
 
-    - Cloud Build API
-    - Compute Engine API
-    - Service Management API
-    - Google Cloud Storage JSON API
+  - Cloud Build API
+  - Compute Engine API
+  - Service Management API
+  - Google Cloud Storage JSON API
 
 ### Grant IAM permissions for Cloud Build principal
 
@@ -64,9 +64,9 @@ Make sure you meet these terms:
 
 1. Add these roles:
 
-    - Cloud Build Service Account (already added by default)
-    - Compute Admin
-    - Service Account User
+  - Cloud Build Service Account (already added by default)
+  - Compute Admin
+  - Service Account User
 
 ### Publish `packer` container image to your `gcr.io`
 
@@ -135,13 +135,13 @@ steps:
 
 1. Input these values:
 
-    - Name: `<your-trigger-name>`
-    - Event: `Push to a branch`
-    - Source: Connect to your Git repository
-    - Configuration: `Autodetected`
-    - Location: `Repository`
-    - Cloud Build configuration file location: `cloudbuild.yaml`
-    - Service account: Leave empty
+  - Name: `<your-trigger-name>`
+  - Event: `Push to a branch`
+  - Source: Connect to your Git repository
+  - Configuration: `Autodetected`
+  - Location: `Repository`
+  - Cloud Build configuration file location: `cloudbuild.yaml`
+  - Service account: Leave empty
 
 1. Click button `Create`
 
