@@ -46,19 +46,19 @@ It also has supports for Amazon Web Service, Azure and many more.
 1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
 1. Click button `ENABLE APIS AND SERVICES`.
 1. Search for these APIs and enable all of them:
-   - Cloud Build API
-   - Compute Engine API
-   - Service Management API
-   - Google Cloud Storage JSON API
+    - Cloud Build API
+    - Compute Engine API
+    - Service Management API
+    - Google Cloud Storage JSON API
 
 ### Grant IAM permissions for Cloud Build principal
 
 1. From the `Navigation Menu` -> `IAM & Admin` -> `IAM`.
 1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
 1. Add these roles:
-   - Cloud Build Service Account (already added by default)
-   - Compute Admin
-   - Service Account User
+    - Cloud Build Service Account (already added by default)
+    - Compute Admin
+    - Service Account User
 
 ### Build `packer` container image
 
@@ -124,13 +124,13 @@ At the root of your repository, add these files:
 1. From the `Navigation Menu` -> `Cloud Build` -> `Triggers`.
 1. Click button `+ Create Trigger`.
 1. Input these values:
-   - Name: `<your-trigger-name>`
-   - Event: `Push to a branch`
-   - Source: Connect to your Git repository
-   - Configuration: `Autodetected`
-   - Location: `Repository`
-   - Cloud Build configuration file location: `cloudbuild.yaml`
-   - Service account: Leave empty
+    - Name: `<your-trigger-name>`
+    - Event: `Push to a branch`
+    - Source: Connect to your Git repository
+    - Configuration: `Autodetected`
+    - Location: `Repository`
+    - Cloud Build configuration file location: `cloudbuild.yaml`
+    - Service account: Leave empty
 1. Click button `Create`
 
 ### Run Trigger
