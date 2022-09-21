@@ -10,7 +10,7 @@ In many cases, developers want to create their own images, either for daily usag
 
 There are many guides on setting up Cloud Build for image building. However, none of them point out common mistakes that can cause hours of logs tracing and retrying till you can get it works.
 
-Thus, this tutorial will help you setup the above workflow and avoid common mistakes.
+Thus, this tutorial will help you set up the above workflow and avoid common mistakes.
 
 ## Introduction
 
@@ -32,7 +32,7 @@ Make sure you meet these terms:
 
 - A billing enabled google project
 - A Git repo contains your source code
-- Install the [gcloud CLI](https://cloud.google.com/sdk/docs/install) or knew how to [Launch Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
+- To install the [gcloud CLI](https://cloud.google.com/sdk/docs/install) or knew how to [Launch Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
 ## Steps
 
@@ -91,7 +91,7 @@ Wait a few second and press `y` when prompt
 
 ### Add packer configs to your source code
 
-At root of your repo, add these files:
+At the root of your repo, add these files:
 
 #### **`cloudbuild.yaml`**
 
@@ -146,13 +146,13 @@ steps:
 
 ### Run Trigger
 
-Click button `RUN` from triggers list. When the snackbar appear, click `Show` to trace realtime logs.
+Click button `RUN` from triggers list. When the snackbar appear, click `Show` to trace real-time logs.
 
 ## Results
 
 From the `Navigation Menu` -> `Compute Engine` -> `STORAGE` -> `Images`
 
-An image is created with name `packer-<timestampe>`
+An image is created with name `packer-<timestamp>`
 
 ## References
 
