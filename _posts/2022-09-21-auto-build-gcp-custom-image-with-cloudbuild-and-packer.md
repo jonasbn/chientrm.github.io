@@ -10,7 +10,7 @@ In many cases, developers want to create their own images, either for daily usag
 
 There are many guides on setting up Cloud Build for image building. However, none of them point out common mistakes that can cause hours of logs tracing and retrying till you can get it works.
 
-Thus, this tutorial will help you set up the above workflow and avoid common mistakes.
+In this tutorial, we will help you set up the custom image workflow and avoid common mistakes.
 
 ## Introduction
 
@@ -40,7 +40,7 @@ Make sure you meet these terms:
 
 1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
 
-2. Obtains `project-id`
+2. Obtains Project ID
 
 <img src="./project-id.png" height="100" src="Project Id"/>
 
@@ -67,9 +67,9 @@ Make sure you meet these terms:
 - Compute Admin
 - Service Account User
 
-### Add `packer` to your `gcr.io`
+### Publish `packer` container image to your `gcr.io`
 
-1. Clone packer
+1. Clone packer project
 
 ```bash
 git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
@@ -87,7 +87,7 @@ cd cloud-builders-community/packer
 gcloud builds submit .
 ```
 
-Wait a few second and press `y` when prompt
+Wait a few second and press `y` when prompt appears
 
 ### Add packer configurations to your source code
 
