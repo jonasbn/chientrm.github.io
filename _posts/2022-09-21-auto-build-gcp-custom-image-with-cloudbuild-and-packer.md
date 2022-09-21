@@ -10,7 +10,7 @@ Google Cloud offers developers thousands of free and public machine images.
 However, developers still need to create custom image for specified cases.
 Although there are already guide from GCP and Packer,
 none of them point out mistakes that can cause hours of debugging.
-Thus, this article will help you set up the workflow and avoid those mistakes.
+Thus, this article will help you set up the workflow and avoid them.
 
 ## Introduction
 
@@ -30,7 +30,7 @@ It also has supports for Amazon Web Service, Azure and many more.
 
 - A billing linked GCP project
 - A Git repository contains your source code
-- To install the [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
+- To install [gcloud](https://cloud.google.com/sdk/docs/install) or launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
 
 ## Steps
 
@@ -56,7 +56,7 @@ It also has supports for Amazon Web Service, Azure and many more.
    - Compute Admin
    - Service Account User
 
-### Publish `packer` container image to your `gcr.io`
+### Build `packer` container image
 
 1. Clone packer project
 
@@ -78,7 +78,7 @@ It also has supports for Amazon Web Service, Azure and many more.
 
 Wait a few second and press `y` when prompt appears
 
-### Add packer configurations to your source code
+### Add packer configurations
 
 At the root of your repository, add these files:
 
