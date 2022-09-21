@@ -4,9 +4,9 @@ title:  "Auto build GCP custom image with Cloud Build and Packer"
 
 # Abstract
 
-Google Cloud offer developers thousands of free and public machine images. They includes famous linux distributions like CentOS, Ubuntu, Debian, ... being built for both regular usages and specilized usages.
+Google Cloud offer developers thousands of free and public machine images. They include famous Linux distributions like CentOS, Ubuntu, Debian, ... being built for both regular usages and specialized usages.
 
-In many case, developers want to create their own images either for daily usage or business requirements.
+In many cases, developers want to create their own images, either for daily usage or business requirements.
 
 Thus, in this article, we will guide you on how to using Google Cloud Build to automate creating custom machine images.
 
