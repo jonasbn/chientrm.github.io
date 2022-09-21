@@ -5,7 +5,8 @@ tags: cloud build, custom image, packer, devops, workflows
 
 ## Abstract
 
-Google Cloud offer developers thousands of free and public machine images. They include famous Linux distributions like CentOS, Ubuntu, Debian, ... being built for both regular usages and specialized usages.
+Google Cloud offer developers thousands of free and public machine images.
+They include famous Linux distributions like CentOS, Ubuntu, Debian, ... being built for both regular usages and specialized usages.
 
 In many cases, developers want to create their own images, either for daily usage or business requirements.
 
@@ -55,9 +56,9 @@ Make sure you meet these terms:
 1. From the `Navigation Menu` -> `IAM & Admin` -> `IAM`.
 1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
 1. Add these roles:
-   - Cloud Build Service Account (already added by default)
-   - Compute Admin
-   - Service Account User
+    - Cloud Build Service Account (already added by default)
+    - Compute Admin
+    - Service Account User
 
 ### Publish `packer` container image to your `gcr.io`
 
@@ -121,31 +122,25 @@ steps:
 ### Setup Cloud Build Trigger
 
 1. From the `Navigation Menu` -> `Cloud Build` -> `Triggers`.
-
 1. Click button `+ Create Trigger`.
-
 1. Input these values:
-
-   - Name: `<your-trigger-name>`
-   - Event: `Push to a branch`
-   - Source: Connect to your Git repository
-   - Configuration: `Autodetected`
-   - Location: `Repository`
-   - Cloud Build configuration file location: `cloudbuild.yaml`
-   - Service account: Leave empty
-
+    - Name: `<your-trigger-name>`
+    - Event: `Push to a branch`
+    - Source: Connect to your Git repository
+    - Configuration: `Autodetected`
+    - Location: `Repository`
+    - Cloud Build configuration file location: `cloudbuild.yaml`
+    - Service account: Leave empty
 1. Click button `Create`
 
 ### Run Trigger
 
 1. Click button `RUN` from triggers list.
-
 1. From the `Navigation Menu` -> `Cloud Build` -> `History`.
 
 ## Results
 
 From the `Navigation Menu` -> `Compute Engine` -> `STORAGE` -> `Images`.
-
 An image named `packer-<timestamp>` is created.
 
 ## Troubleshooting FAQ
