@@ -39,50 +39,50 @@ Make sure you meet these terms:
 
 ### Enable required APIs
 
-1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
+  1. Browse to [Google Cloud Console](https://console.cloud.google.com/).
 
-1. Obtains Project ID
+  1. Obtains Project ID
 
-![Project Id](./project-id.png)
+  ![Project Id](./project-id.png)
 
-1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
+  1. From `Navigation Menu` -> `APIs & Services` -> `Enabled APIs & Services`.
 
-1. Click button `ENABLE APIS AND SERVICES`.
+  1. Click button `ENABLE APIS AND SERVICES`.
 
-1. Search for these APIs and enable all of them:
+  1. Search for these APIs and enable all of them:
 
-  - Cloud Build API
-  - Compute Engine API
-  - Service Management API
-  - Google Cloud Storage JSON API
+    - Cloud Build API
+    - Compute Engine API
+    - Service Management API
+    - Google Cloud Storage JSON API
 
 ### Grant IAM permissions for Cloud Build principal
 
-1. From the `Navigation Menu` -> `IAM & Admin` -> `IAM`.
+  1. From the `Navigation Menu` -> `IAM & Admin` -> `IAM`.
 
-1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
+  1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
 
-1. Add these roles:
+  1. Add these roles:
 
-  - Cloud Build Service Account (already added by default)
-  - Compute Admin
-  - Service Account User
+    - Cloud Build Service Account (already added by default)
+    - Compute Admin
+    - Service Account User
 
-### Publish `packer` container image to your `gcr.io`
+  ### Publish `packer` container image to your `gcr.io`
 
-1. Clone packer project
+  1. Clone packer project
 
     ```bash
     git clone https://github.com/GoogleCloudPlatform/cloud-builders-community.git
     ```
 
-1. Cd into packer
+  1. Cd into packer
 
     ```bash
     cd cloud-builders-community/packer
     ```
 
-1. Build and publish to `gcr.io`
+  1. Build and publish to `gcr.io`
 
     ```bash
     gcloud builds submit .
