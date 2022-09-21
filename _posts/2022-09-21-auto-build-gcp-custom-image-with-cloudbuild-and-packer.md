@@ -146,13 +146,22 @@ An image named `packer-<timestamp>` is created.
 ## Troubleshooting FAQ
 
 ```bash
-Failed to trigger build: generic::invalid_argument: generic::invalid_argument: if 'build.service_account' is specified, the build must either (a) specify 'build.logs_bucket' (b) use the CLOUD_LOGGING_ONLY logging option, or (c) use the NONE logging option
+Failed to trigger build: generic::invalid_argument: generic::invalid_argument:
+if 'build.service_account' is specified, the build must either
+(a) specify 'build.logs_bucket'
+(b) use the CLOUD_LOGGING_ONLY logging option,
+or (c) use the NONE logging option
 ```
 
 - Leave the service account empty when creating Cloud Build Trigger.
 
 ```bash
-Error waiting for SSH: Packer experienced an authentication error when trying to connect via SSH. This can happen if your username/password are wrong. You may want to double-check your credentials as part of your debugging process. original error: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
+Error waiting for SSH:
+Packer experienced an authentication error when trying to connect via SSH.
+This can happen if your username/password are wrong.
+You may want to double-check your credentials as part of your debugging process.
+original error: ssh: handshake failed: ssh: unable to authenticate,
+attempted methods [none publickey], no supported methods remain
 ```
 
 - Try changing source image
