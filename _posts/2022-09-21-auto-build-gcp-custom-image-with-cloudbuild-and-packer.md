@@ -10,7 +10,7 @@ Google Cloud offers developers thousands of free and public machine images.
 However, developers still need to create custom image for specified cases.
 Although there are already guide from GCP and Packer,
 none of them point out mistakes that can cause hours of debugging.
-Thus, this article will help you set up the workflow and avoid them.
+Thus, this article will help you set up the correct workflow and avoid them.
 
 ## Introduction
 
@@ -153,7 +153,7 @@ if 'build.service_account' is specified, the build must either
 or (c) use the NONE logging option
 ```
 
-- Leave the service account empty when creating Cloud Build Trigger.
+Solution: Leave the service account empty when creating Cloud Build Trigger.
 
 ```bash
 Error waiting for SSH:
@@ -164,7 +164,7 @@ original error: ssh: handshake failed: ssh: unable to authenticate,
 attempted methods [none publickey], no supported methods remain
 ```
 
-- Try changing source image
+Solution: Try changing source image
 
 ## References
 
