@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: pip install proselint
-      - run: proselint _posts/2022-09-21-auto-build-gcp-custom-image-with-cloudbuild-and-packer.md
+      - run: npm i gramma -g
+      - run: gramma check -p _posts/2022-09-21-auto-build-gcp-custom-image-with-cloudbuild-and-packer.md
