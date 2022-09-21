@@ -93,9 +93,9 @@ Wait a few second and press `y` when prompt appears
 
 At the root of your repository, add these files:
 
-#### **`cloudbuild.yaml`**
-
 ```yaml
+# cloudbuild.yaml
+
 steps:
   - name: "gcr.io/<your-project-id>/packer"
     args:
@@ -103,9 +103,9 @@ steps:
       - packer.json
 ```
 
-#### **`packer.json`**
+```js
+# packer.json
 
-```json
 {
   "builders": [
     {
