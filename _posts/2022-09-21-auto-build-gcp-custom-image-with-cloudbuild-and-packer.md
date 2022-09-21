@@ -135,13 +135,13 @@ At the root of your repository, add these files:
 
 1. Input these values:
 
-  - Name: `<your-trigger-name>`
-  - Event: `Push to a branch`
-  - Source: Connect to your Git repository
-  - Configuration: `Autodetected`
-  - Location: `Repository`
-  - Cloud Build configuration file location: `cloudbuild.yaml`
-  - Service account: Leave empty
+   - Name: `<your-trigger-name>`
+   - Event: `Push to a branch`
+   - Source: Connect to your Git repository
+   - Configuration: `Autodetected`
+   - Location: `Repository`
+   - Cloud Build configuration file location: `cloudbuild.yaml`
+   - Service account: Leave empty
 
 1. Click button `Create`
 
