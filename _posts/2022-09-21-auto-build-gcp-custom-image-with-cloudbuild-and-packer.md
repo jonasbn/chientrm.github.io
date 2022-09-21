@@ -56,9 +56,9 @@ Make sure you meet these terms:
 1. From the `Navigation Menu` -> `IAM & Admin` -> `IAM`.
 1. Edit the existed principal `<random-number>@cloudbuild.gserviceaccount.com`
 1. Add these roles:
-    - Cloud Build Service Account (already added by default)
-    - Compute Admin
-    - Service Account User
+   - Cloud Build Service Account (already added by default)
+   - Compute Admin
+   - Service Account User
 
 ### Publish `packer` container image to your `gcr.io`
 
